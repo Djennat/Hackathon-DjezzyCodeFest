@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShareAlt, FaFacebook, FaInstagram, FaPhone, FaLightbulb } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import '../styles/PostPage.css';
 
 const PostsPage = ({ posts }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const handleShare = (postId) => {
     const postUrl = `https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/post/${postId}`;
     window.open(postUrl, '_blank'); // Ouvre LinkedIn dans un nouvel onglet
   };
+
+  // Filtrer les posts en fonction de la recherche
+  const filteredPosts = posts.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
       {/* Header */}
       <header className="app-header">
         <h1 className="app-name">
-          <u><span className="highlight">N</span>our</u> {/* Logo en noir et souligné */}
+          <u><span className="highlight">N</span>our</u>
         </h1>
         <nav className="nav-links">
           <a href="/">Home</a>
@@ -28,12 +35,29 @@ const PostsPage = ({ posts }) => {
 
       {/* Contenu principal */}
       <div className="post-container">
-        <h1>Liste des Posts</h1>
-        {posts.length === 0 ? (
-          <p>Aucun post pour le moment.</p>
+        <h1>Donation Cause</h1>
+
+        {/* Barre de recherche */}
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Rechercher..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button className="search-button">🔍</button>
+        </div>
+
+        {/* Bouton "Créer un nouveau post" */}
+        <Link to="/create">
+          <button className="create-post-button">+ Ajouter une cause</button>
+        </Link>
+
+        {filteredPosts.length === 0 ? (
+          <p>Aucun post trouvé.</p>
         ) : (
           <div className="posts-grid">
-            {posts.map((post) => (
+            {filteredPosts.map((post) => (
               <div key={post.id} className="post-card">
                 <div className="image-container">
                   {post.image && <img src={post.image} alt="Post" className="post-image" />}
@@ -55,9 +79,6 @@ const PostsPage = ({ posts }) => {
             ))}
           </div>
         )}
-        <Link to="/create">
-          <button className="create-post-button">Créer un nouveau post</button>
-        </Link>
       </div>
 
       {/* Footer */}

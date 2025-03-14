@@ -1,10 +1,10 @@
-/* Conteneur principal */
+/* 📌 Conteneur principal */
 .post-container { 
     padding: 20px;
     text-align: center;
 }
 
-/* Grille des posts */
+/* 📌 Grille des posts */
 .posts-grid {
     display: flex;
     flex-wrap: wrap;
@@ -13,27 +13,26 @@
     align-items: stretch;
 }
 
-/* Carte d'un post */
+/* 📌 Carte d'un post */
 .post-card {
     background-color: white;
     color: black;
     border: 4px solid green;
-    padding: 0; /* Supprime tout padding qui crée un espace */
+    padding: 0;
     border-radius: 10px;
     width: 300px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden; /* Évite tout débordement */
+    overflow: hidden;
 }
 
+/* 📌 Conteneur image */
 .image-container {
     position: relative;
     width: 100%;
-    height: 200px; /* Taille fixe pour garantir l'alignement */
+    height: 200px;
     overflow: hidden;
-    margin: 0; /* Supprime tout éventuel espace */
-    padding: 0;
 }
 
 .post-image {
@@ -43,42 +42,27 @@
     display: block;
 }
 
-
-/* Nom de l'auteur en haut à gauche occupant toute la largeur */
+/* 📌 Nom de l'auteur */
 .author-name {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Prend toute la largeur */
+    width: 50%;
     background: rgb(240, 237, 237);
     color: rgb(12, 12, 12);
     padding: 8px 12px;
     font-size: 14px;
-    text-align: left; /* Aligner le texte à gauche */
-    border-radius: 0px 0px 10px 00px; /* Coins arrondis en haut */
+    text-align: left;
+    border-radius: 0px 0px 10px 0px;
 }
 
-
-
-/* Informations du post */
-
-
-
-
-
-
+/* 📌 Informations du post */
 .post-info {
     text-align: left;
-    margin: 30px; 
-    
+    margin: 30px;
 }
 
-
-
-
-
-
-/* Titre du post + icône */
+/* 📌 Titre du post + icône */
 .h {
     display: flex;
     align-items: center;
@@ -87,7 +71,7 @@
     margin: 20px 0;
 }
 
-/* Icône de partage */
+/* 📌 Icône de partage */
 .icon-share {
     color: rgb(18, 15, 15);
     font-size: 20px;
@@ -99,17 +83,18 @@
     color: black;
 }
 
-/* Prix du post */
+/* 📌 Prix du post */
 .post-price {
     font-weight: bold;
     background: rgba(0, 128, 0, 0.2);
     color: black;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
-/* Bouton "Voir les détails" */
+/* 📌 Bouton "Voir plus de détails" */
 .button-container {
     position: absolute;
     right: 10px;
@@ -117,7 +102,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    
 }
 
 .post-button {
@@ -127,59 +111,80 @@
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 5px;
-    
 }
 
 .post-button:hover {
     background: darkgreen;
 }
 
-/* Bouton "Créer un post" */
+/* 📌 Conteneur pour "Ajouter une cause" + barre de recherche */
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* 📌 Bouton "Ajouter une cause" */
 .create-post-button {
-    margin-top: 20px;
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
     background-color: #007f00;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
 }
 
-/* Header */
-.app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: green;
-    color: white;
+.create-post-button:hover {
+    background-color: darkgreen;
 }
 
-.app-name {
-    font-size: 24px;
+/* Ajout du "+" avant le texte */
+.create-post-button span {
+    font-size: 20px;
     font-weight: bold;
+    margin-right: 8px;
 }
 
-.highlight {
-    color: yellow;
+/* 📌 Barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid green;
+    border-radius: 0px;
+    padding: 8px 15px;
+    width: 60%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.sign-up-button {
-    background-color: white;
-    color: rgb(128, 87, 0);
+/* 📌 Input de recherche */
+.search-bar input {
+    flex: 1;
     border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    
+    font-size: 16px;
 }
 
-/* Footer */
+/* 📌 Bouton recherche (icône) */
+.search-bar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: green;
+}
+
+/* 📌 Footer */
 .app-footer {
     background-color: green;
     color: white;
@@ -191,30 +196,3 @@
 .footer-section h3 {
     margin-bottom: 10px;
 }
-
-.footer-subtitle {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* Icône de cœur (par défaut rouge) */
-/* Icône de cœur (par défaut : blanc avec bordure verte) */
-/* Icône de cœur (par défaut : transparent) */
-.icon-heart {
-    font-size: 30px;
-    color: #F4C542;
-    cursor: pointer;
-    color: transparent; /* Cœur transparent */
-    transition: color 0.3s ease;
-    
-    -webkit-text-stroke: 2px rgb(30, 239, 30); /* Contour vert */
-    
-}
-
-/* Quand on clique, le cœur devient jaune */
-.icon-heart.active {
-    color: #F4C542; /* Cœur jaune */
-    -webkit-text-stroke: 0px; /* Supprime le contour vert */
-}
-
