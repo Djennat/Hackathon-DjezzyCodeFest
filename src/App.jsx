@@ -6,6 +6,7 @@ import PostDetails from './pages/PostDetails';
 import PaymentPage from './pages/PaymentPage';
 import DonorPage from './pages/DonorPage';
 import CharityPage from './pages/CharityPage';
+import OptionsPage from './pages/OptionsPage'; // Import de la nouvelle page des options
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/create" element={<CreatePostPage addNewPost={addNewPost} />} />
         <Route path="/post/:id" element={<PostDetails posts={posts} />} />
         <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/options" element={<OptionsPage />} /> {/* Nouvelle route */}
         <Route path="/donor" element={<DonorPage />} />
         <Route path="/charity" element={<CharityPage />} />
       </Routes>

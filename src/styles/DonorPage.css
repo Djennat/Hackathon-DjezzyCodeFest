@@ -1,0 +1,89 @@
+/* Conteneur principal */
+.page-container {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header avec le nom de l'application */
+.app-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+
+.app-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.app-header .highlight {
+  color: #007f00; /* Couleur de "N" alignée au bouton */
+}
+
+.app-header hr {
+  border: 0;
+  border-top: 2px solid #007f00;
+  margin-top: 10px;
+}
+
+/* Formulaire */
+.form-box {
+  background-color: rgba(106, 99, 109, 0.164);
+  width: 550px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input-container .input-icon {
+  position: absolute;
+  left: 15px; /* Distance entre l'icône et le bord gauche */
+  color: #007f00; /* Même couleur que le bouton */
+  font-size: 18px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 15px 15px 15px 45px; /* Ajoute un espace à gauche pour l'icône */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bouton */
+.form-box button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 60px;
+  background-color: #007f00; /* Couleur alignée à "N" */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #005f00;
+}

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { FaUser, FaHome, FaPhone, FaUserAlt } from 'react-icons/fa';
+import '../styles/DonorPage.css';
+
 
 const DonorPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
+    firstName: '',
+    lastName: '',
+    address: '',
+    phone: '',
   });
 
   const handleChange = (e) => {
@@ -14,55 +18,78 @@ const DonorPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Connexion réussie pour : ${formData.name}`);
-    // Ajoutez ici la logique pour vérifier les informations d'identification
+    alert(`Merci pour votre inscription, ${formData.firstName}!`);
   };
 
   return (
-    <div>
-      <h1>Connexion pour les Donneurs</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Nom :
+    <div className="page-container">
+      {/* Header */}
+      <header className="app-header">
+        <h1>
+          <span className="highlight">N</span>our
+        </h1>
+        <hr />
+      </header>
+
+      {/* Formulaire */}
+      <div className="form-box">
+        <h2>Donor Sign Up</h2>
+        <form onSubmit={handleSubmit}>
+          {/* Input pour le prénom */}
+          <div className="input-container">
+            <FaUserAlt className="input-icon left" />
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
               onChange={handleChange}
-              placeholder="Entrez votre nom"
               required
             />
-          </label>
-        </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Email :
+          </div>
+
+          {/* Input pour le nom */}
+          <div className="input-container">
+            <FaUser className="input-icon left" />
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
               onChange={handleChange}
-              placeholder="Entrez votre email"
               required
             />
-          </label>
-        </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Mot de passe :
+          </div>
+
+          {/* Input pour l'adresse */}
+          <div className="input-container">
+            <FaHome className="input-icon left" />
             <input
-              type="password"
-              name="password"
-              value={formData.password}
+              type="text"
+              name="address"
+              placeholder="Home Address"
+              value={formData.address}
               onChange={handleChange}
-              placeholder="Entrez votre mot de passe"
               required
             />
-          </label>
-        </div>
-        <button type="submit">Se connecter</button>
-      </form>
+          </div>
+
+          {/* Input pour le numéro de téléphone */}
+          <div className="input-container">
+            <FaPhone className="input-icon right" /> {/* L'icône est à droite */}
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
     </div>
   );
 };

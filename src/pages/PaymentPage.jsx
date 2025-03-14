@@ -1,63 +1,86 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/PaymentPage.css';
+import visaImg from "../assets/images/visa.png";
+import mastercardImg from "../assets/images/mastercard.png";
 
 const PaymentPage = () => {
-  const [showBox, setShowBox] = useState(false);
+  const [selectedPayment, setSelectedPayment] = useState('');
   const navigate = useNavigate();
 
-  const handleOptionSelect = (option) => {
-    setShowBox(false);
-    navigate(option === 'Donneur' ? '/donor' : '/charity');
+  const handlePaymentSelection = (paymentMethod) => {
+    setSelectedPayment(paymentMethod);
+  };
+
+  const handleSubmit = () => {
+    if (!selectedPayment) {
+      alert('Veuillez sélectionner une méthode de paiement.');
+      return;
+    }
+    navigate('/options');
   };
 
   return (
-    <div style={{ position: 'relative' }}>
-      <h1>Options de Paiement</h1>
-      <p>Choisissez votre méthode de paiement :</p>
-      <button onClick={() => setShowBox(true)} style={{ marginTop: '20px' }}>
-        Payer
-      </button>
+    <div className="payment-container">
+      
+      <header className="app-header">
+  <h1 className="app-title">
+    <span className="highlight">N</span>our
+  </h1>
+</header>
 
-      {showBox && (
-        <>
-          {/* Fond sombre */}
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-              zIndex: 999,
-            }}
-          ></div>
-
-          {/* Boîte de sélection */}
-          <div
-            style={{
-              position: 'fixed',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              backgroundColor: '#fff',
-              border: '1px solid black',
-              padding: '20px',
-              zIndex: 1000,
-              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
-              borderRadius: '10px',
-            }}
-          >
-            <h3>Vous êtes :</h3>
-            <button onClick={() => handleOptionSelect('Donneur')} style={{ marginRight: '10px' }}>
-              Donneur
-            </button>
-            <button onClick={() => handleOptionSelect('Association caritative')}>
-              Association caritative
-            </button>
+<hr className="header-line" /> {/* Ligne placée en dehors du header */}
+      
+      <div className="payment-box centered">
+        <h2>Checkout</h2>
+        <div className="payment-input-group">
+          <div className="input-row">
+            <div className="input-group">
+              <label htmlFor="firstName">First Name</label>
+              <input type="text" id="firstName" className="payment-input" required />
+            </div>
+            <div className="input-group">
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" id="lastName" className="payment-input" required />
+            </div>
           </div>
-        </>
-      )}
+          <div className="input-group full-width">
+            <label htmlFor="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" className="payment-input" required />
+          </div>
+        </div>
+
+
+        <h3 className='notre_h3'>Payment Methods</h3>
+
+        <div className="payment-methods">
+          
+          <div className="payment-method-icons">
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="visa"
+                onChange={() => handlePaymentSelection('visa')}
+              />
+              <img src={visaImg} alt="Visa" className="payment-icon" />
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="mastercard"
+                onChange={() => handlePaymentSelection('mastercard')}
+              />
+              <img src={mastercardImg} alt="Mastercard" className="payment-icon" />
+            </label>
+          </div>
+        </div>
+
+        <button className="payment-button" onClick={handleSubmit}>
+          Pay Now
+        </button>
+      </div>
     </div>
   );
 };

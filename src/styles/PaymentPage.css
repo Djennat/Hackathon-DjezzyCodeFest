@@ -1,0 +1,140 @@
+/* Payment Page Styles */
+
+.payment-container {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  .payment-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .payment-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007960;
+    margin-right: auto;
+  }
+  
+  /* .payment-header-line {
+    border: 0;
+    border-top: 2px solid #ddd;
+    flex-grow: 1;
+    margin-left: 10px;
+  } */
+  
+  /* Payment Box Styles */
+  .payment-box {
+    background-color: #ffffff7a;
+    width: 600px; /* Augmenter la largeur */
+    height: 500px; /* Augmenter la hauteur */
+    padding: 20px; /* Ajouter un peu plus d'espace intérieur */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Centrer le contenu horizontalement */
+    justify-content: center; /* Centrer le contenu verticalement */
+  }
+  
+  
+  .centered {
+    margin-top: 50px; /* Centered vertically */
+  }
+  
+  /* Input Styles */
+  .payment-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  .input-group {
+    flex: 1;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .payment-input {
+    width: 100%;
+    padding: 10px;
+    
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Payment Methods */
+  .payment-methods {
+    text-align: center;
+  }
+  
+  .payment-method-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .payment-icon {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* Button Styles */
+  .payment-button {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007960;
+    color: white;
+    cursor: pointer;
+    
+  }
+  
+  .payment-button:hover {
+    background-color: #007960;
+  }
+  .notre_h3{
+    font-size: 17px;
+  }
+  
+  .header-line {
+    width: 50%; /* Ajuster selon le besoin */
+    height: 3px;
+    background-color: #007960;
+    border: none;
+    margin: 10px auto; /* Centre la ligne et ajoute un espace sous le header */
+    display: block; /* Assurer qu'elle est bien visible */
+  }
+  
+

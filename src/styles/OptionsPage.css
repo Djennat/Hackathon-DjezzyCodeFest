@@ -1,0 +1,120 @@
+/* Styles généraux */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+}
+
+.app-name {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.sign-up-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Options buttons */
+.options-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  height: 58vh;
+}
+
+.options-button {
+  padding: 20px 30px;
+  font-size: 20px;
+  height: 250px;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  background-color: #abece0b4;
+  color: rgb(40, 35, 35);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.options-button:hover {
+  background-color: #56a04595;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #007960;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-section h3 {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon,
+.icon {
+  font-size: 24px;
+  color: white;
+}
+
+.icon {
+  font-size: 20px;
+  color: rgb(232, 232, 225);
+  margin-right: 5px;
+}

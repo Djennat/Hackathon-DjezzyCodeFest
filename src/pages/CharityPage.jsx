@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { FaBuilding, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const CharityPage = () => {
   const [formData, setFormData] = useState({
     associationName: '',
     email: '',
-    password: '',
+    phone: '',
   });
 
   const handleChange = (e) => {
@@ -15,53 +16,57 @@ const CharityPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Connexion réussie pour l'association : ${formData.associationName}`);
-    // Ajoutez ici la logique pour vérifier les informations d'identification
   };
 
   return (
-    <div>
-      <h1>Connexion pour les Associations Caritatives</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Nom de l'Association :
-            <input
-              type="text"
-              name="associationName"
-              value={formData.associationName}
-              onChange={handleChange}
-              placeholder="Entrez le nom de l'association"
-              required
-            />
-          </label>
+    <div className="page-container">
+      {/* Header avec le nom de l'application */}
+      <header className="app-header">
+        <h1>
+          <span className="highlight">N</span>our
+        </h1>
+        <hr />
+      </header>
+
+      {/* Formulaire */}
+      <form onSubmit={handleSubmit} className="form-box">
+        <h1 className="form-title">Associations Sign Up</h1>
+        <div className="input-container">
+          <FaBuilding className="input-icon left" />
+          <input
+            type="text"
+            name="associationName"
+            value={formData.associationName}
+            onChange={handleChange}
+            placeholder="Association Name"
+            required
+          />
         </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Email :
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Entrez votre email"
-              required
-            />
-          </label>
+        <div className="input-container">
+          <FaEnvelope className="input-icon left" />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Association Address"
+            required
+          />
         </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Mot de passe :
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Entrez votre mot de passe"
-              required
-            />
-          </label>
+        <div className="input-container">
+          <FaPhone className="input-icon left" />
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Phone Number"
+            required
+          />
         </div>
-        <button type="submit">Se connecter</button>
+        <button type="submit" className="form-button">
+          Sign Up
+        </button>
       </form>
     </div>
   );
