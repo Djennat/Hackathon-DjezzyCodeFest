@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+// furmulaire de remplir
 const CreatePostPage = ({ addNewPost }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
+// contenue de page detaille
 const PostDetails = ({ posts }) => {
   const { id } = useParams();
   const navigate = useNavigate();
