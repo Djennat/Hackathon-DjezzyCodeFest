@@ -11,11 +11,11 @@ const PostsPage = ({ posts }) => {
   };
 
   return (
-    <div className="post-container">
+    <div>
       {/* Header */}
       <header className="app-header">
         <h1 className="app-name">
-          <span className="highlight">N</span>our
+          <u><span className="highlight">N</span>our</u> {/* Logo en noir et souligné */}
         </h1>
         <nav className="nav-links">
           <a href="/">Home</a>
@@ -27,36 +27,38 @@ const PostsPage = ({ posts }) => {
       <hr />
 
       {/* Contenu principal */}
-      <h1>Liste des Posts</h1>
-      {posts.length === 0 ? (
-        <p>Aucun post pour le moment.</p>
-      ) : (
-        <div className="posts-grid">
-          {posts.map((post) => (
-            <div key={post.id} className="post-card">
-              <div className="image-container">
-                {post.image && <img src={post.image} alt="Post" className="post-image" />}
-                <span className="author-name">{post.author}</span>
+      <div className="post-container">
+        <h1>Liste des Posts</h1>
+        {posts.length === 0 ? (
+          <p>Aucun post pour le moment.</p>
+        ) : (
+          <div className="posts-grid">
+            {posts.map((post) => (
+              <div key={post.id} className="post-card">
+                <div className="image-container">
+                  {post.image && <img src={post.image} alt="Post" className="post-image" />}
+                  <span className="author-name">{post.author}</span>
+                </div>
+                <div className="post-info">
+                  <h2 className="h">
+                    {post.title}
+                    <FaShareAlt className="icon-share" onClick={() => handleShare(post.id)} />
+                  </h2>
+                  <p className="post-price">Prix: {post.price}€</p>
+                </div>
+                <div className="button-container">
+                  <Link to={`/post/${post.id}`}>
+                    <button className="post-button">Voir les détails</button>
+                  </Link>
+                </div>
               </div>
-              <div className="post-info">
-                <h2 className="h">
-                  {post.title}
-                  <FaShareAlt className="icon-share" onClick={() => handleShare(post.id)} />
-                </h2>
-                <p className="post-price">Prix: {post.price}€</p>
-              </div>
-              <div className="button-container">
-                <Link to={`/post/${post.id}`}>
-                  <button className="post-button">Voir les détails</button>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-      <Link to="/create">
-        <button className="create-post-button">Créer un nouveau post</button>
-      </Link>
+            ))}
+          </div>
+        )}
+        <Link to="/create">
+          <button className="create-post-button">Créer un nouveau post</button>
+        </Link>
+      </div>
 
       {/* Footer */}
       <footer className="app-footer">
