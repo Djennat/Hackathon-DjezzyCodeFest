@@ -3,7 +3,7 @@
 <p align="center">
       
 
-  <h1 align="center">Genuine-Charity-Application</h1>
+  <h1 align="center">Nour-Charity-Application</h1>
     <br><br>
   </p>
 </p>
@@ -14,7 +14,7 @@
 Create a Transparent Charity Donation System using Smart Contracts.
 
 
-## 🔗The Design of Charity System Based on Blockchain
+## 🔗The Design of Charity Donation System Based on Blockchain
 The charity system mode proposed is shown in the Figure below. There are four roles: donors,
 charity organizations and cooperative stores that will be added in the futur. The charity organizations 
 create charity projects through the platform. Donors learn about charity projects on the platform, 
@@ -41,8 +41,8 @@ Following functions have been met:
 6. Cooperative shops initiates services in the DApp.
 
 
-
- ![Click to view](https://drive.google.com/file/d/1do7MplBzug6qlS1GR0AWTFY6ulP9VRAy/view?usp=sharing)
+## 🌐 Demo
+![Dapp Functionalities](docs/functionalities.png)
 
 ## 📃 Description
 
@@ -60,14 +60,22 @@ Following functions have been met:
 
 * The website and the test modules are not yet connected and the code is placed in seperate folders.
 
-## 🛠Technology stack
+## 🛠 Technology Stack
 
-Tools and technologies that we learnt and used in the project.
+Tools and technologies used in the project:
 
-1. Solidity
-2. HTML,CSS,JS,React
-3. Node JS
-4. web3,ganache-cli,mocha,solc node modules
+1. **Solidity**: Smart contract development (v0.8.28).
+2. **Python, FastAPI, Web3.py**: Backend API for blockchain interaction.
+3. **React, HTML, CSS, JavaScript**: Frontend (in progress) for user interface.
+4. **Node.js**: Runtime for Hardhat and React.
+5. **Hardhat**: Local blockchain development and deployment.
+6. **OpenZeppelin**: Secure contract utilities (`Ownable`).
+
+## 🚀 Installation
+1. **Clone the Repo**:
+   ```bash
+   git clone https://github.com/Djennat/Hackathon-DjezzyCodeFest.git
+   cd Hackathon-DjezzyCodeFest
 
 
 ## 📝Applications
