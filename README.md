@@ -46,17 +46,15 @@ Following functions have been met:
 
 ## 📃 Description
 
-* We have created a Solidity Smart Contract for this cause and we have used web3, ganache-cli, mocha, to test out our contract.
+* We have created a Solidity Smart Contract for this cause and we have used web3,hardhat, to test out our contract.
 
 * In the contracts folder, you will find a final solidity contract and the individual modules inside contracts_classified directory.
 
-* On the Frontend Part we have html,css,javascript and full UI of Genuine Charity App along with Admin Panel in the website folder.
+* On the Frontend Part we have html,css,javascript and full UI of Nour Charity App.
 
-* Included a test directory with a test file to test all the functions used in the contract by deploying it on ganache and using web3 to utilize the ABI.
+* Included a test directory with a test file to test all the functions used in the contract by deploying it on hardat.
 
-* Included a sample React Template so that the frontend can be used to include the website along with the test code to make a production app.
-
-* Included code to compile the contract and to deploy the contract on the Rinkeby Test Network using the Infuria node module.
+* Included a sample React Template so that the frontend can be used to include the website.
 
 * The website and the test modules are not yet connected and the code is placed in seperate folders.
 
@@ -76,7 +74,3 @@ Tools and technologies used in the project:
    ```bash
    git clone https://github.com/Djennat/Hackathon-DjezzyCodeFest.git
    cd Hackathon-DjezzyCodeFest
-
-
-## 📝Applications
-> Many fake charity organizations pose as genuine and loot money from innocent people in the name of charity. Most people want to donate money to a good cause of charity, but they are unsure if the money is going to reach the right hands of the destitute.  The blockchain system can bring transparency to online charity trusts. Contributors can see the journey of the donation in realtime and confirm if it’s reaching the deserving hands or not.
