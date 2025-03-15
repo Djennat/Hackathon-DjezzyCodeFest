@@ -4,7 +4,7 @@ import { FaShareAlt, FaFacebook, FaInstagram, FaPhone, FaLightbulb } from 'react
 import { MdLocationOn } from 'react-icons/md';
 import '../styles/PostPage.css';
 import Footer from '../components/footer';
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 const PostsPage = ({ posts }) => {
   const [searchTerm, setSearchTerm] = useState("");
 

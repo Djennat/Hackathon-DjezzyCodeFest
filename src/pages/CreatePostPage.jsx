@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/CreatePostPage.css'; 
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 import Footer from '../components/footer';
 
 const CreatePostPage = ({ addNewPost }) => {

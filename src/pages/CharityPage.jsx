@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBuilding, FaEnvelope, FaPhone } from 'react-icons/fa';
-import Nav from '../components/nav';
+import Nav from '../components/Nav';
 const CharityPage = () => {
   const [formData, setFormData] = useState({
     associationName: '',
