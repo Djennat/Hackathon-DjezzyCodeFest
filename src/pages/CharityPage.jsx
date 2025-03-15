@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
-import { FaBuilding, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaBuilding, FaEnvelope, FaPhone, FaLock, FaFileUpload } from 'react-icons/fa';
 import Nav from '../components/nav';
+
 const CharityPage = () => {
   const [formData, setFormData] = useState({
     associationName: '',
     email: '',
     phone: '',
+    password: '',
+    file: null
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleFileChange = (e) => {
+    setFormData({ ...formData, file: e.target.files[0] });
   };
 
   const handleSubmit = (e) => {
@@ -24,7 +31,7 @@ const CharityPage = () => {
 
       {/* Formulaire */}
       <form onSubmit={handleSubmit} className="form-box">
-        <h1 className="form-title">Associations Sign Up</h1>
+        <h1 className=".form-title">associations sign up</h1>
         <div className="input-container">
           <FaBuilding className="input-icon left" />
           <input
@@ -55,6 +62,26 @@ const CharityPage = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone Number"
+            required
+          />
+        </div>
+        <div className="input-container">
+          <FaLock className="input-icon left" />
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div className="input-container">
+          <FaFileUpload className="input-icon left" />
+          <input
+            type="file"
+            name="file"
+            onChange={handleFileChange}
             required
           />
         </div>

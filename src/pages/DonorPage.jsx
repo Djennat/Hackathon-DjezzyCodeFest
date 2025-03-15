@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { FaUser, FaHome, FaPhone, FaUserAlt } from 'react-icons/fa';
+import { FaUser, FaHome, FaPhone, FaUserAlt, FaLock } from 'react-icons/fa';
 import '../styles/DonorPage.css';
-
 
 const DonorPage = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +8,7 @@ const DonorPage = () => {
     lastName: '',
     address: '',
     phone: '',
+    password: '',
   });
 
   const handleChange = (e) => {
@@ -76,12 +76,25 @@ const DonorPage = () => {
 
           {/* Input pour le numéro de téléphone */}
           <div className="input-container">
-            <FaPhone className="input-icon right" /> {/* L'icône est à droite */}
+            <FaPhone className="input-icon right" />
             <input
               type="text"
               name="phone"
               placeholder="Phone Number"
               value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          {/* Input pour le mot de passe */}
+          <div className="input-container">
+            <FaLock className="input-icon left" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
               onChange={handleChange}
               required
             />
