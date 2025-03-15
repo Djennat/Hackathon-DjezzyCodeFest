@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Nav.css';
 
-function Nav() { 
+function Nav() {
+  const navigate = useNavigate(); // Hook for navigation
+
   return (
     <header className="app-header">
       <h1 className="app-name">
@@ -13,7 +15,10 @@ function Nav() {
         <Link to="/categories">Categories</Link>
         <Link to="/about">About</Link>
       </nav>
-      <button className="sign-up-button">Sign Up</button>
+    
+      <button className="sign-up-button" onClick={() => navigate('/options')}>
+        Sign Up
+      </button>
     </header>
   );
 }

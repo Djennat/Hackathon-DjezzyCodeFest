@@ -32,14 +32,15 @@ body {
   width: 250px;
   border: none;
   border-radius: 10px;
-  background-color: #abece0b4;
-  color: rgb(40, 35, 35);
+  background-color: #F2F2F2;
+  color: #212121;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .options-button:hover {
-  background-color: #56a04595;
+  background-color: #007960;
+  color: #F2F2F2;
   transform: scale(1.05);
 }
 

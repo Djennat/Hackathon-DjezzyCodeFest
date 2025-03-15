@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// furmulaire de remplir
+import '../styles/CreatePostPage.css'; 
+import Nav from '../components/nav';
+import Footer from '../components/footer';
+
 const CreatePostPage = ({ addNewPost }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     image: null,
-    author: '',
     title: '',
     description: '',
-    typeModel: '',
-    price: '',
-    quantity: '',
+    category: '',
+    goal: '',
   });
 
   const [error, setError] = useState('');
@@ -31,71 +32,47 @@ const CreatePostPage = ({ addNewPost }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.title || !formData.description || !formData.typeModel || !formData.price || !formData.quantity) {
-      setError('Tous les champs doivent être remplis.');
+    if (!formData.title || !formData.description || !formData.category || !formData.goal) {
+      setError('All fields must be filled.');
       return;
     }
 
-    const newPost = { ...formData, id: Date.now() }; // Ajout d'un identifiant unique
+    const newPost = { ...formData, id: Date.now() };
     addNewPost(newPost);
-    navigate('/'); // Redirection vers la page des posts
+    navigate('/');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <input type="file" accept="image/*" onChange={handleImageChange} />
-      <br />
-      <input
-        type="text"
-        name="author"
-        placeholder="Nom de l'auteur"
-        value={formData.author}
-        onChange={handleChange}
-      />
-      <br />
-      <input
-        type="text"
-        name="title"
-        placeholder="Titre"
-        value={formData.title}
-        onChange={handleChange}
-      />
-      <br />
-      <input
-        type="text"
-        name="description"
-        placeholder="Description"
-        value={formData.description}
-        onChange={handleChange}
-      />
-      <br />
-      <input
-        type="text"
-        name="typeModel"
-        placeholder="Type Modèle"
-        value={formData.typeModel}
-        onChange={handleChange}
-      />
-      <br />
-      <input
-        type="number"
-        name="price"
-        placeholder="Prix"
-        value={formData.price}
-        onChange={handleChange}
-      />
-      <br />
-      <input
-        type="number"
-        name="quantity"
-        placeholder="Quantité"
-        value={formData.quantity}
-        onChange={handleChange}
-      />
-      <br />
-      <button type="submit">Créer le Post</button>
-    </form>
+    <div>
+      <Nav/>
+    <div className="container-creat">
+      <div className="form-box-creat">
+        <h2>Create Donation Cause</h2>
+
+        {error && <p className="error-text-creat">{error}</p>}
+
+        <form onSubmit={handleSubmit} className="form-creat">
+          <input type="text" name="title" placeholder="Case Title" value={formData.title} onChange={handleChange} className="input-creat" />
+          <input type="text" name="category" placeholder="Category" value={formData.category} onChange={handleChange} className="input-creat" />
+          <input type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange} className="input-creat" />
+          <input type="number" name="goal" placeholder="Donation Goal" value={formData.goal} onChange={handleChange} className="input-creat" />
+
+          <label className="upload-label-creat">Upload Image</label>
+          <div className="image-upload-box-creat">
+            <input type="file" accept="image/*" onChange={handleImageChange} className="file-input-creat" />
+            {formData.image ? (
+              <img src={formData.image} alt="Preview" className="image-preview-creat" />
+            ) : (
+              <span className="upload-icon-creat">+</span>
+            )}
+          </div>
+
+          <button type="submit" className="submit-btn-creat">Create</button>
+        </form>
+      </div>
+    </div>
+    <Footer/>
+    </div>
   );
 };
 

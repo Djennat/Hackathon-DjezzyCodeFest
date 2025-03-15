@@ -35,7 +35,7 @@ const CreatePost = ({ addNewPost }) => {
     }
 
     addNewPost(formData);
-    navigate('/'); // Redirection vers la page des posts
+    navigate('/PostsPage'); // Redirection vers la page des posts
   };
 
   return (

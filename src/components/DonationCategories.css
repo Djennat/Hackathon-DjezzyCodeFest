@@ -1,0 +1,61 @@
+.donation-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.category-card {
+  background: #F1F1F1;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.itemicon {
+  font-size: 3rem; /* Make the icon bigger */
+  color: #00712D; /* Match your color */
+  margin-bottom: 10px;
+}
+
+.itemtitle{
+  color: #00712D;
+  margin-bottom: 5px;
+}
+
+.itemp{
+  font-size: 14px;
+  color: #333;
+}
+
+.arrow {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #00712D;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .donation-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .donation-categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
