@@ -31,11 +31,11 @@ const PostsPage = ({ posts }) => {
         </nav>
         <button className="sign-up-button">Sign Up</button>
       </header>
-      <hr />
+      {/* <hr /> */}
 
       {/* Contenu principal */}
       <div className="post-container">
-        <h1>Donation Cause</h1>
+        <h1 className='our_title'>Donation Cause</h1>
 
         {/* Barre de recherche */}
         <div className="search-bar">
@@ -51,7 +51,7 @@ const PostsPage = ({ posts }) => {
         {/* Bouton "Créer un nouveau post" */}
         <Link to="/create">
           <button className="create-post-button">
-            <span className="plus-sign">+</span> Ajouter une cause
+            <span className="plus-sign">+</span> Donation Cause
           </button>
         </Link>
 

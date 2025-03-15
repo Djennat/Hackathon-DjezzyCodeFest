@@ -1,0 +1,105 @@
+/* Container */
+.container-creat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Form Box */
+.form-box-creat {
+    background-color: #007960;
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 100px;
+}
+
+.form-box-creat h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.form-creat {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Fields */
+.input-creat {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Upload Image Box */
+.upload-label-creat {
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.image-upload-box-creat {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.file-input-creat {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon-creat {
+    font-size: 24px;
+    color: #555;
+}
+
+.image-preview-creat {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Submit Button */
+.submit-btn-creat {
+    width: 100%;
+    background-color: #F4C542;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn-creat:hover {
+    background-color: #d4a32d;
+}
+
+/* Error Message */
+.error-text-creat {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

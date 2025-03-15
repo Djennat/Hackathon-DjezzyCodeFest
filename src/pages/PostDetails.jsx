@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-// contenue de page detaille
+import '../styles/PostDetails.css';
+
 const PostDetails = ({ posts }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -11,20 +12,25 @@ const PostDetails = ({ posts }) => {
   }
 
   return (
-    <div>
-      <h1>Détails du Post</h1>
-      <img
-        src={post.image || 'https://via.placeholder.com/150'}
-        alt="Post"
-        style={{ width: '150px', height: '150px' }}
-      />
-      <h2>{post.title}</h2>
-      <p><strong>Description :</strong> {post.description}</p>
-      <p><strong>Type Modèle :</strong> {post.typeModel}</p>
-      <p><strong>Prix :</strong> {post.price}€</p>
-      <p><strong>Quantité :</strong> {post.quantity}</p>
-      <p><strong>Auteur :</strong> {post.author}</p>
-      <button onClick={() => navigate('/payment')}>Faire un don</button>
+    <div className="container">
+      <div className="post-details">
+        <div className="image-section">
+          <img
+            src={post.image || 'https://via.placeholder.com/150'}
+            alt="Post"
+            className="post-image"
+          />
+        </div>
+        <div className="content-section">
+          <h2 className="post-title">{post.title}</h2>
+          <p className="post-description">{post.description}</p>
+          <div className="info-grid">
+            <p><strong>Type Modèle :</strong> {post.typeModel}</p>
+            <p><strong>Auteur :</strong> {post.author}</p>
+          </div>
+          <button className="donate-button" onClick={() => navigate('/payment')}>Faire un don</button>
+        </div>
+      </div>
     </div>
   );
 };
