@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBuilding, FaEnvelope, FaPhone } from 'react-icons/fa';
-
+import Nav from '../components/nav';
 const CharityPage = () => {
   const [formData, setFormData] = useState({
     associationName: '',
@@ -20,13 +20,7 @@ const CharityPage = () => {
 
   return (
     <div className="page-container">
-      {/* Header avec le nom de l'application */}
-      <header className="app-header">
-        <h1>
-          <span className="highlight">N</span>our
-        </h1>
-        <hr />
-      </header>
+      <Nav/>
 
       {/* Formulaire */}
       <form onSubmit={handleSubmit} className="form-box">

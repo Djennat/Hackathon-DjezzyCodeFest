@@ -1,4 +1,7 @@
-/* Payment Page Styles */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .payment-container {
     font-family: Arial, sans-serif;

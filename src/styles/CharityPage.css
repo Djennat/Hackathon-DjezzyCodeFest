@@ -1,3 +1,7 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .page-container {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -8,34 +12,7 @@
     padding: 20px;
   }
   
-  /* Header */
-  .app-header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: left;
-    padding: 10px 20px;
-    background-color: white;
-  }
-  
-  .app-header h1 {
-    
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .app-header .highlight {
-    color: #007960; /* Couleur alignée au bouton */
-  }
-  
-  .app-header hr {
-    border: 0;
-    border-top: 2px solid #007960;
-    margin-top: 10px;
-  }
-  
+ 
   /* Formulaire */
   .form-box {
     background-color: rgba(239, 239, 239, 0.918);
@@ -50,7 +27,6 @@
   .form-title {
     font-size: 24px;
     margin-bottom: 20px;
-   
     color: #333;
   }
   

@@ -1,3 +1,7 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* Conteneur principal */
 .page-container {
   font-family: Arial, sans-serif;
@@ -59,7 +63,7 @@
 .input-container .input-icon {
   position: absolute;
   left: 15px; /* Distance entre l'icône et le bord gauche */
-  color: #007f00; /* Même couleur que le bouton */
+  color: #007960; /* Même couleur que le bouton */
   font-size: 18px;
 }
 
@@ -76,7 +80,7 @@
   width: 100%;
   padding: 15px;
   margin-top: 60px;
-  background-color: #007f00; /* Couleur alignée à "N" */
+  background-color: #007960; /* Couleur alignée à "N" */
   color: white;
   border: none;
   border-radius: 5px;
@@ -85,5 +89,5 @@
 }
 
 .form-box button:hover {
-  background-color: #005f00;
+  background-color: #005040;
 }

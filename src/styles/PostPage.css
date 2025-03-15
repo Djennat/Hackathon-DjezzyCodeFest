@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* 📌 Conteneur principal */
 .post-container { 
     padding: 20px;
@@ -17,7 +21,7 @@
 .post-card {
     background-color: white;
     color: black;
-    border: 4px solid green;
+    border: 4px solid  #007960;
     padding: 0;
     border-radius: 10px;
     width: 300px;
@@ -105,7 +109,7 @@
 }
 
 .post-button {
-    background: green;
+    background:  #007960;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -114,7 +118,7 @@
 }
 
 .post-button:hover {
-    background: darkgreen;
+    background:  #007960;
 }
 
 /* 📌 Conteneur pour "Ajouter une cause" + barre de recherche */
@@ -143,7 +147,7 @@
 }
 
 .create-post-button:hover {
-    background-color: darkgreen;
+    background-color: #007960;
 }
 
 /* Ajout du "+" avant le texte */
@@ -158,7 +162,7 @@
     display: flex;
     align-items: center;
     background: white;
-    border: 2px solid green;
+    border: 2px solid #007960;
     border-radius: 0px;
     padding: 8px 15px;
     width: 60%;
@@ -171,7 +175,6 @@
     border: none;
     outline: none;
     padding: 10px;
-    
     font-size: 16px;
 }
 
@@ -181,18 +184,6 @@
     border: none;
     cursor: pointer;
     font-size: 18px;
-    color: green;
+    color: #007960;
 }
 
-/* 📌 Footer */
-.app-footer {
-    background-color: green;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer-section h3 {
-    margin-bottom: 10px;
-}

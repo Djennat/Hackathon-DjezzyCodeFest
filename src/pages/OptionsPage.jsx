@@ -3,25 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/OptionsPage.css';
 import { FaFacebook, FaInstagram, FaPhone, FaLightbulb } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
+import Nav from '../components/nav';
 
 const OptionsPage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="options-container">
-      {/* Header */}
-      <header className="app-header">
-        <h1 className="app-name">
-          <span className="highlight">N</span>our
-        </h1>
-        <nav className="nav-links">
-          <a href="/">Home</a>
-          <a href="/">Categories</a>
-          <a href="/">About</a>
-        </nav>
-        <button className="sign-up-button">Sign Up</button>
-      </header>
-      <hr />
+     <Nav/>
 
       {/* Options */}
       <div className="options-buttons">

@@ -1,0 +1,65 @@
+/* Header */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 2px solid #007960; 
+    box-sizing: border-box;
+    z-index: 1000; 
+  }
+  
+  /* Logo */
+  .app-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Highlight Color */
+  .app-header .highlight {
+    color: #007960; /* Same color as button */
+  }
+  
+  /* Navigation */
+  .nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #007960; /* Highlight on hover */
+  }
+  
+  /* Sign Up Button */
+  .sign-up-button {
+    background-color: #007960;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sign-up-button:hover {
+    background-color:  #007960;
+  }
+  

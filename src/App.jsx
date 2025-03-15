@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import PostsPage from './pages/PostsPage';
 import CreatePostPage from './pages/CreatePostPage';
 import PostDetails from './pages/PostDetails';
@@ -18,7 +19,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<PostsPage posts={posts} />} />
+      <Route path="/" element={<Home />} />
+        <Route path="/PostsPage" element={<PostsPage posts={posts} />} />
         <Route path="/create" element={<CreatePostPage addNewPost={addNewPost} />} />
         <Route path="/post/:id" element={<PostDetails posts={posts} />} />
         <Route path="/payment" element={<PaymentPage />} />
